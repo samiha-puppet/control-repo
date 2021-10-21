@@ -9,6 +9,10 @@ mod 'puppetlabs/concat',  '7.0.1'
 # Puppet comply module
 mod 'puppetlabs-comply',           '2.1.0'
 
+mod 'puppetlabs-powershell', '5.0.0'
+mod 'puppetlabs-pwshlib', '0.10.1'
+mod 'puppetlabs-registry', '4.0.1'
+
 # dependencies for comply
 mod 'puppet/archive',              '5.0.0'
 mod 'puppetlabs/chocolatey',       '6.0.1'
