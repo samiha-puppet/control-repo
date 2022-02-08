@@ -5,6 +5,7 @@ forge 'https://forge.puppet.com'
 #mod 'puppetlabs/inifile', '5.0.1'
 #mod 'puppetlabs/stdlib',  '7.0.1'
 mod 'puppetlabs/concat',  '7.0.1'
+mod 'puppetlabs-motd', '6.1.0'
 
 # Puppet comply module
 mod 'puppetlabs-comply',           '2.1.0'
