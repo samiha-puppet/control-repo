@@ -5,5 +5,7 @@
 # @example
 #   include profile::platform::base
 class profile::platform::base {
-  include motd
+  class { 'motd':
+    content => "Hello world!\n",
+  }
 }
