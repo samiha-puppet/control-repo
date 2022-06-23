@@ -10,7 +10,7 @@
 
 ## What You Get From This control-repo
 
-This is a template [control repository](https://puppet.com/docs/pe/latest/code_management/control_repo.html) that has the minimum amount of scaffolding to make it easy to get started with [r10k](https://puppet.com/docs/pe/latest/code_management/r10k.html) or Puppet Enterprise's [Code Manager](https://puppet.com/docs/pe/latest/code_management/code_mgr.html).
+This is a template [control repository](https://puppet.com/docs/pe/latest/control_repo.html) that has the minimum amount of scaffolding to make it easy to get started with [r10k](https://puppet.com/docs/pe/latest/r10k.html) or Puppet Enterprise's [Code Manager](https://puppet.com/docs/pe/latest/code_mgr.html).
 
 The important files and items in this template are as follows:
 
@@ -18,10 +18,10 @@ The important files and items in this template are as follows:
 * An example Puppetfile with various module references.
 * An example Hiera configuration file and data directory with pre-created common.yaml and nodes directory.
   * These match the default hierarchy that ships with PE.
-* An [environment.conf](https://puppet.com/docs/puppet/5.3/config_file_environment.html) that correctly implements:
+* An [environment.conf](https://puppet.com/docs/puppet/7/config_file_environment.html) that correctly implements:
   * A site-modules directory for roles, profiles, and any custom modules for your organization.
   * A config\_version script.
-* An example [config\_version](https://puppet.com/docs/puppet/5.3/config_file_environment.html#configversion) script that outputs the git commit ID of the code that was used during a Puppet run.
+* An example [config\_version](https://puppet.com/docs/puppet/7/config_file_environment.html#environment-conf-allowed-settings) script that outputs the git commit ID of the code that was used during a Puppet run.
 
 Here's a visual representation of the structure of this repository:
 
@@ -54,13 +54,13 @@ To get started with using the control-repo template in your own environment and 
 
 1. Install GitLab.
     * <https://about.gitlab.com/downloads/>
-1. After GitLab is installed you may sign in with the `root` user and password `5iveL!fe`.
+1. After GitLab is installed you may sign in with the `root` user. If you didn't specify a custom password during installation, a temporary password is located in `/etc/gitlab/initial_root_password`.
 1. Make a user for yourself.
 1. Make an SSH key to link with your user. You’ll want to do this on the machine you intend to edit code from (most likely not your Puppet master, but your local workstation or laptop).
-    * <http://doc.gitlab.com/ce/ssh/README.html>
+    * <https://docs.gitlab.com/ee/ssh/index.html>
     * <https://help.github.com/articles/generating-ssh-keys/>
 1. Create a group called `puppet` (this is case sensitive).
-    * <http://doc.gitlab.com/ce/workflow/groups.html>
+    * <https://docs.gitlab.com/ee/user/group/index.html>
 1. Add your user to the `puppet` group as well.
 1. Create a project called `control-repo`, and set the Namespace to be the `puppet` group.
 1. Clone this control repository to your laptop/workstation:
@@ -120,6 +120,4 @@ Follow [GitHub's documentation](https://docs.github.com/en/github/creating-cloni
 
 ## Code Manager Setup
 
-If you use Puppet Enterprise and have not yet enabled and configured Code Manager, in addition to reading the official [documentation](https://puppet.com/docs/pe/latest/code_mgr.html) for enabling it, you may want to look at the Ramp-Up Program's control repository instead of this one. It's similar to this repo except that it has batteries included, so to speak. There are pre-built profiles for configuring Code Manager, generating SSH keys, and setting up your Git server to work with Code Manager.
-
-* <https://github.com/Puppet-RampUpProgram/control-repo>
+If you use Puppet Enterprise see the official [documentation](https://puppet.com/docs/pe/latest/code_mgr.html) for enabling Code Manager.
